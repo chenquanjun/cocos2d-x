@@ -374,6 +374,7 @@ public:
      * creates the action with 3D rotation angles
      * @param duration in seconds
      */
+    static RotateTo* create(float duration, float dstAngle3D_X, float dstAngle3D_Y, float dstAngle3D_Z);
     static RotateTo* create(float duration, const Vec3& dstAngle3D);
 
     //
@@ -402,6 +403,8 @@ CC_CONSTRUCTOR_ACCESS:
      * initializes the action
      * @param duration in seconds
      */
+     
+    bool initWithDuration(float duration, float dstAngle3D_X, float dstAngle3D_Y, float dstAngle3D_Z);
     bool initWithDuration(float duration, const Vec3& dstAngle3D);
 
     /** 
@@ -441,6 +444,8 @@ public:
     /**
      * @param duration in seconds
      */
+     
+    static RotateBy* create(float duration, float dstAngle3D_X, float dstAngle3D_Y, float dstAngle3D_Z);
     static RotateBy* create(float duration, const Vec3& deltaAngle3D);
 
     //
@@ -466,6 +471,7 @@ CC_CONSTRUCTOR_ACCESS:
      * @param deltaAngleZ_Y in degreesCW
      */
     bool initWithDuration(float duration, float deltaAngleZ_X, float deltaAngleZ_Y);
+    bool initWithDuration(float duration, float dstAngle3D_X, float dstAngle3D_Y, float dstAngle3D_Z);
     bool initWithDuration(float duration, const Vec3& deltaAngle3D);
     
 protected:
